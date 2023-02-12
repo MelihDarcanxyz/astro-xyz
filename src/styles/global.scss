@@ -1,0 +1,7 @@
+
+@use 'theme';
+
+body {
+    color: theme.$text;
+    background-color: theme.$base;
+}
