@@ -1,0 +1,16 @@
+---
+import "@styles/Card.scss"
+
+export interface Props {
+    title:          string,
+    description:    string,
+    url:            string | undefined
+}
+
+const { title, description, url } = Astro.props as Props
+---
+
+<div class="card card--dark">
+    <a href={ url }  class="card__title"><h2>{ title }</h2></a>
+    <p class="card__body">{ description }</p>
+</div>

@@ -1,7 +1,172 @@
-
-@use 'theme';
+@use "theme";
 
 body {
+    font-size: 1.5rem;
+
     color: theme.$text;
+    background-color: theme.$crust;
+
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    font-size: 1.5rem;
+    width: 60vw;
+    margin: 5% auto;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        color: theme.$yellow;
+        font-weight: (10 - $i) * 100;
+    }
+}
+
+h1 {
+    color: theme.$blue;
+}
+
+a {
+    color: theme.$pink;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+strong {
+    color: theme.$yellow;
+
+    em {
+        color: theme.$peach;
+    }
+}
+
+em {
+    color: theme.$red;
+
+    strong {
+        color: theme.$peach;
+    }
+}
+
+del {
+    color: theme.$overlay0;
+}
+
+th {
+    border-bottom: solid 1px theme.$lavender;
+    border-left: solid 1px theme.$lavender;
+    border-top: solid 1px theme.$lavender;
+
+    &:last-child {
+        border-right: solid 1px theme.$lavender;
+    }
+
+    padding: 5px 10px;
+}
+
+td {
+    border-bottom: solid 1px theme.$lavender;
+    border-left: solid 1px theme.$lavender;
+
+    &:last-child {
+        border-right: solid 1px theme.$lavender;
+    }
+
+    padding: 5px 10px;
+}
+
+code {
+    color: theme.$green;
     background-color: theme.$base;
+}
+
+pre {
+    font-size: larger;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+blockquote {
+    color: theme.$lavender;
+    font-style: italic;
+    background-color: theme.$base;
+    padding: 5px 10px;
+}
+
+li {
+    &::marker {
+        color: theme.$teal;
+    }
+}
+
+hr {
+    color: theme.$lavender;
+}
+
+input {
+    &[type="checkbox"] {
+        background-color: red;
+
+        &:checked {
+            color: green;
+            background-color: aqua;
+        }
+    }
+}
+
+.primary {
+    color: theme.$text;
+}
+
+@media print {
+    header,
+    footer {
+        display: none;
+    }
+
+    main {
+        width: 210mm;
+        height: 297mm;
+
+        margin: 0;
+
+        print-color-adjust: economy;
+    }
+}
+
+@page {
+    margin: 1cm 2cm;
+}
+
+a {
+    page-break-inside: avoid;
+}
+blockquote {
+    page-break-inside: avoid;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+img {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+}
+table,
+pre {
+    page-break-inside: avoid;
+}
+ul,
+ol,
+dl {
+    page-break-before: avoid;
 }

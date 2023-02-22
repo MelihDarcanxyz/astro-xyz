@@ -14,7 +14,7 @@ import catppuccin_mocha from "./src/themes/catppuccin-mocha.json";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.org/",
+  site: "http://localhost:3000/",
   integrations: [mdx(), robotsTxt(), sitemap()],
   markdown: {
     shikiConfig: {

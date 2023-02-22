@@ -1,11 +1,10 @@
 ---
-import { SITE_TITLE } from "@config";
-
 export interface Props {
-    title?: string;
+    title:          string;
+    description:    string;
 }
 
-const { title = SITE_TITLE } = Astro.props as Props;
+const { title, description } = Astro.props as Props;
 const CANONICAL_URL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -16,6 +15,7 @@ const CANONICAL_URL = new URL(Astro.url.pathname, Astro.site);
     
     <!-- Title and some basic SEO stuff -->
     <title>{ title }</title>
+    <meta name="description" content={ description }/>
 
     <link rel="canonical" href={ CANONICAL_URL } />
     <meta name="generator" content={ Astro.generator }/>

@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# hygen starter files
+_templates/generator/
+_templates/init/
