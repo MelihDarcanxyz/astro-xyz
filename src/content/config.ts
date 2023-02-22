@@ -5,7 +5,7 @@ const defaultCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    author: z.enum(["John Doe", "Jane Doe", "Melih DARCAN"]),
+    author: z.enum(["John Doe", "Jane Doe"]),
     date: z.date(),
     tags: z.array(z.string()),
     draft: z.boolean(),
@@ -14,5 +14,4 @@ const defaultCollection = defineCollection({
 });
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
-  'col': defaultCollection,
 };

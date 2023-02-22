@@ -1,5 +1,5 @@
 // Site config
-export const SITE_TITLE: string = "[melo@earth ~]$";
+export const SITE_TITLE: string = "xyz-astro";
 export const SITE_DESCRIPTION: string = "";
 
 // Author config
