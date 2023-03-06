@@ -129,12 +129,21 @@ input {
     }
 
     main {
+        color: black !important;
+        background-color: white !important;
+        font-size: 1rem;
+
         width: 210mm;
         height: 297mm;
 
         margin: 0;
 
         print-color-adjust: economy;
+    }
+
+
+    [astro-icon] {
+        color: black !important;
     }
 }
 
@@ -169,4 +178,23 @@ ul,
 ol,
 dl {
     page-break-before: avoid;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        margin-right: 5.5rem;
+    }
+}
+
+.contacts {
+    text-align: center;
+
+    [astro-icon] {
+        color: theme.$text;
+        width: 2rem;
+        display: inline;
+    }
 }

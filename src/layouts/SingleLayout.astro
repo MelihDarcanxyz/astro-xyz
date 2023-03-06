@@ -7,7 +7,6 @@ const { frontmatter } = Astro.props;
 
 <MainLayout title={ frontmatter.title } description={ frontmatter.description }>
     <h1>{ frontmatter.title }</h1>
-    <small>written by { frontmatter.author }</small>
     <hr />
     <slot>
         An empty markdown
