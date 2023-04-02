@@ -1,11 +1,9 @@
-@use 'theme';
-
-
+@use '/src/styles/theme';
 
 .tag-container {
 
     [astro-icon="ion:pricetags-outline"] {
-        color: theme.$peach;
+        color: var(--peach);
         display: inline;
         width: 1.25rem;
         justify-content: center;

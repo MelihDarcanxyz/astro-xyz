@@ -1,5 +1,5 @@
 ---
-import "@styles/Card.scss"
+import CSS from "./Card.module.scss"
 
 export interface Props {
     title:          string,
@@ -10,7 +10,7 @@ export interface Props {
 const { title, description, url } = Astro.props as Props
 ---
 
-<div class="card card--dark">
-    <a href={ url }  class="card__title"><h2>{ title }</h2></a>
-    <p class="card__body">{ description }</p>
+<div class:list={[ CSS['card'] ]}>
+    <a href={ url }><h2>{ title }</h2></a>
+    <p>{ description }</p>
 </div>

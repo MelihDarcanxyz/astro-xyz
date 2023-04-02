@@ -1,7 +1,7 @@
 ---
-to: src/components/<%= name %>.astro
+to: src/components/<%= name %>/<%= name %>.astro
 ---
 ---
-import "@styles/<%= name %>.module.scss"
+import CSS from "./<%= name %>.module.scss"
 ---
 

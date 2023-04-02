@@ -1,6 +1,6 @@
 ---
-to: src/styles/<%= name %>.module.scss
+to: src/components/<%= name %>/<%= name %>.module.scss
 ---
 
-@use 'theme';
+@use '/src/styles/theme';
 

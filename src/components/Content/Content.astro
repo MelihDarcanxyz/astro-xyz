@@ -1,5 +1,7 @@
 ---
-import Tags from '@components/Tags.astro';
+import CSS from "./Content.module.scss"
+
+import Tags from '@components/Tags/Tags.astro';
 
 export interface Props {
     isIndex?: boolean,
@@ -18,7 +20,7 @@ const { isIndex = false, toRender } = Astro.props as Props;
 
             return (
             <>
-              { isIndex ? <h1>{ data.title }<span class="primary"> posts</span></h1> : <h1>{ data.title }</h1> }
+              { isIndex ? <h1>{ data.title }<span class:list={[ CSS['primary'] ]}> posts</span></h1> : <h1>{ data.title }</h1> }
               <Tags tags={ data.tags }/>
               <Content />
             </>
@@ -26,3 +28,5 @@ const { isIndex = false, toRender } = Astro.props as Props;
         }
     }
 }
+
+
