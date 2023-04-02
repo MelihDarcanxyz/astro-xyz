@@ -3,8 +3,8 @@
 body {
     font-size: 1.5rem;
 
-    color: theme.$text;
-    background-color: theme.$crust;
+    color: var(--fg);
+    background-color: var(--bg);
 
     padding: 0;
     margin: 0;
@@ -18,17 +18,17 @@ main {
 
 @for $i from 1 through 6 {
     h#{$i} {
-        color: theme.$yellow;
+        color: var(--yellow);
         font-weight: (10 - $i) * 100;
     }
 }
 
 h1 {
-    color: theme.$blue;
+    color: var(--blue);
 }
 
 a {
-    color: theme.$pink;
+    color: var(--pink);
     text-decoration: none;
 
     &:hover {
@@ -37,51 +37,51 @@ a {
 }
 
 strong {
-    color: theme.$yellow;
+    color: var(--yellow);
 
     em {
-        color: theme.$peach;
+        color: var(--orange);
     }
 }
 
 em {
-    color: theme.$red;
+    color: var(--red);
 
     strong {
-        color: theme.$peach;
+        color: var(--orange);
     }
 }
 
 del {
-    color: theme.$overlay0;
+    color: var(--overlay0);
 }
 
 th {
-    border-bottom: solid 1px theme.$lavender;
-    border-left: solid 1px theme.$lavender;
-    border-top: solid 1px theme.$lavender;
+    border-bottom: solid 1px var(--lavender);
+    border-left: solid 1px var(--lavender);
+    border-top: solid 1px var(--lavender);
 
     &:last-child {
-        border-right: solid 1px theme.$lavender;
+        border-right: solid 1px var(--lavender);
     }
 
     padding: 5px 10px;
 }
 
 td {
-    border-bottom: solid 1px theme.$lavender;
-    border-left: solid 1px theme.$lavender;
+    border-bottom: solid 1px var(--lavender);
+    border-left: solid 1px var(--lavender);
 
     &:last-child {
-        border-right: solid 1px theme.$lavender;
+        border-right: solid 1px var(--lavender);
     }
 
     padding: 5px 10px;
 }
 
 code {
-    color: theme.$green;
-    background-color: theme.$base;
+    color: var(--green);
+    background-color: var(--base);
 }
 
 pre {
@@ -91,22 +91,23 @@ pre {
 }
 
 blockquote {
-    color: theme.$lavender;
+    color: var(--lavender);
     font-style: italic;
-    background-color: theme.$base;
+    background-color: var(--base);
     padding: 5px 10px;
 }
 
 li {
     &::marker {
-        color: theme.$teal;
+        color: var(--teal);
     }
 }
 
 hr {
-    color: theme.$lavender;
+    color: var(--lavender);
 }
 
+/* TODO
 input {
     &[type="checkbox"] {
         background-color: red;
@@ -117,9 +118,10 @@ input {
         }
     }
 }
+*/
 
 .primary {
-    color: theme.$text;
+    color: var(--text);
 }
 
 @media print {
@@ -193,7 +195,7 @@ dl {
     text-align: center;
 
     [astro-icon] {
-        color: theme.$text;
+        color: var(--text);
         width: 2rem;
         display: inline;
     }
