@@ -1,6 +1,5 @@
 ---
 // Layout imports
-import Content from '@components/Content.astro';
 import MainLayout from '@layouts/MainLayout.astro';
 import { getCollection } from 'astro:content';
 
@@ -31,5 +30,4 @@ console.log(data.title);
 ---
 
 <MainLayout title={ data.title } description={ data.description }>
-    <Content toRender={ page }/>
 </MainLayout>
