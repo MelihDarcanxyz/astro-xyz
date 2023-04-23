@@ -1,6 +1,7 @@
 ---
 // Layout imports
 import MainLayout from '@layouts/MainLayout.astro';
+import PageRenderer from '@components/PageRenderer.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths () {
@@ -30,4 +31,5 @@ console.log(data.title);
 ---
 
 <MainLayout title={ data.title } description={ data.description }>
+    <PageRenderer pagePage={ page }/>
 </MainLayout>
